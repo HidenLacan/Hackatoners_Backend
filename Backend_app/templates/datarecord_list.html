@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Records</title>
+</head>
+<body>
+    <h1>Data Records</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Created At</th>
+                <th>JSON Data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in datarecords %}
+                <tr>
+                    <td>{{ record.name }}</td>
+                    <td>{{ record.value }}</td>
+                    <td>{{ record.created_at }}</td>
+                    <td>{{ record.json_data }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
